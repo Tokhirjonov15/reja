@@ -1,31 +1,28 @@
 {
-  "name": "Alex",
+  "name": "Steve",
   "profession": "Software Engineer",
-  "age": 24,
+  "age": 20,
   "residence": "S.Korea",
-  "address": "S.Korea, Samcheok",
-  "languages": ["Uzbek", "English", "Korean"],
-  "skills": ["HTML", "CSS", "JavaScript", "NodeJS", "Python"],
-  "extraSkills": [
-    "Bootstrap",
-    "Materialize",
-    "Styling",
-    "Sass",
-    "Django",
-    "Flask",
+  "address": "S.Korea, Busan",
+  "languages": ["Uzbek", "Korean", "English"],
+  "skills": ["Html", "Css", "Js", "NodeJS", "Python"],
+  "extra_skills": [
+    "Bootstrap, Materialize",
+    "Styling, Sass",
+    "Django, Flask",
     "GIT Knowledge"
   ],
-  "workplace": "Software Engineer in IT Company",
-  "serviceDescription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio maxime, facilis consequuntur quam autem accusantium fuga et alias id illo usdy uwakcu ueqbda.",
-  "aboutMe": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio maxime, facilis consequuntur quam autem accusantium fuga et alias id illo",
+  "work_place": "Software Engineer in IT Company",
+  "service_desc": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat",
+  "about_me": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, volutpat feugiat placerat lobortis. Natoque rutrum semper sed suspendisse nunc lectus.",
   "city": "Denau",
   "title": ["Flower", "Seedlings", "Gardner", "Old", "New"],
-  "flowerDescription": [
+  "flower_desc": [
     "What is a Flower?",
     "What is a Seedling?",
-    "Who is a Gardner?"
+    "Who is Gardner?"
   ],
-  "flowerNames": [
+  "flower_name": [
     "Tulip",
     "Daffodil",
     "Poppy",
@@ -34,9 +31,9 @@
     "Rose",
     "Snowdrop",
     "Cherry",
-    "Blossom"
+    "blossom"
   ],
-  "flowerPrices": [
+  "flower_price": [
     "15$",
     "25$",
     "12$",
@@ -47,6 +44,6 @@
     "19$",
     "9$"
   ],
-  "famousWords": ["World is Beautiful with Flowers"],
-  "famousNames": ["Steve Jobs"]
+  "famous_words": ["World is Beautiful with Flowers"],
+  "famous_name": ["Steve Jobs"]
 }
