@@ -1,46 +1,24 @@
-console.log("Starting Web Server");
-const express = require("express");
-const res = require("express/lib/response");
-const app = express();
 const http = require("http");
-const fs = require("fs");
+const mongodb = require("mongodb");
 
-let user;
-fs.readFile("database/user.json", "utf8", (err, data) => {
-    if(err) {
-        console.log("ERROR:", err);
-    } else {
-        user = JSON.parse(data)       
-    }      
-});  
-             
-// 1: Kirish code  
-app.use(express.static("public"));  
-app.use(express.json()); 
-app.use(express.urlencoded({extended: true}));       
-       
-// 2: Session code 
+let db;
+const connectingString = "mongodb+srv://tokhirjonov:tokhirjonov15@cluster0.x7adtjv.mongodb.net/Reja";
 
-// 3: Views code         
-app.set("views", "views");                
-app.set("view engine", "ejs");            
-
-// 4: Routing code  
-app.post("/create-item", (req, res) => {
-    console.log(req.body);
-    res.json({ test: "success" }); 
-});
-
-app.get('/author', (req, res) => { 
-    res.render("author", {user: user});
-});
-
-app.get('/', function (req, res) {
-    res.render("reja");
-}); 
-
-const server = http.createServer(app);
-let PORT = 3000;
-server.listen(PORT, function() {
+mongodb.connect(connectingString, {
+    useNewUrlParser: true, 
+    useUnifiedTopology: true,
+}, 
+(err, client) => {
+    if(err) console.log("ERROR on connecting MongoDB");
+    else {
+        console.log("MongoDB connection succeed");
+        module.exports = client;
+        
+        const app = require("./app");
+        const server = http.createServer(app);
+        let PORT = 3000;
+        server.listen(PORT, function() {
     console.log(`The server is running successfully on port: ${PORT}, http://localhost:${PORT}`);
-});      
+});  
+    }
+});
