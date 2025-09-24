@@ -1,3 +1,27 @@
+// TASK B:
+function countDigits(str) {
+  if (typeof str !== "string") {
+    return "Parameter must be a string";
+  }
+
+  let count = 0;
+  for (let i = 0; i < str.length; i++) {
+    if (!isNaN(str[i]) && str[i] !== " ") { 
+      count++;
+    }
+  }
+  return count;
+}
+
+// Test
+console.log(countDigits("hello123"));     
+console.log(countDigits("abc4567xyz"));   
+console.log(countDigits("no digits"));    
+console.log(countDigits("2025 year!"));   
+
+
+
+
 // TASK A :
 
 // function countLetter(letter, word) {
