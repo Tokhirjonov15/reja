@@ -1,30 +1,26 @@
 // TASK A :
 
-function countLetter(letter, word) {
-  if (typeof letter !== "string" || typeof word !== "string") {
-    return "Both parameters must be strings";
-  }
-  if (letter.length !== 1) {
-    return "The first parameter must be a single letter";
-  }
+// function countLetter(letter, word) {
+//   if (typeof letter !== "string" || typeof word !== "string") {
+//     return "Both parameters must be strings";
+//   }
+//   if (letter.length !== 1) {
+//     return "The first parameter must be a single letter";
+//   }
 
-  let count = 0;
-  for (let i = 0; i < word.length; i++) {
-    if (word[i] === letter) {
-      count++;
-    }
-  }
-  return count;
-}
+//   let count = 0;
+//   for (let i = 0; i < word.length; i++) {
+//     if (word[i] === letter) {
+//       count++;
+//     }
+//   }
+//   return count;
+// }
 
-console.log(countLetter("e", "koreya"));     
-console.log(countLetter("a", "asaka"));     
-console.log(countLetter("e", "Alex"));     
-console.log(countLetter("s", "MIT"));  
-
-
-
-
+// console.log(countLetter("e", "koreya"));     
+// console.log(countLetter("a", "asaka"));     
+// console.log(countLetter("e", "Alex"));     
+// console.log(countLetter("s", "MIT"));  
 
 
 // console.log("Jack Ma maslaxatlari");
@@ -96,3 +92,27 @@ console.log(countLetter("s", "MIT"));
 //     console.log(javob);
 // }
 // run();
+
+//  ⭐️ Synchronous function vs Asynchronous function
+// Asynchronous: CALLBACK
+
+// DEFINE
+// function qoldiqliBolish(a, b, callback) {
+//   if (b === 0) {
+//     callback("Mahraj nolga teng bolmaydi", null);
+//   } else {
+//     const c = a % b;
+//     callback(null, c, true);
+//   }
+// }
+
+// // CALL
+// qoldiqliBolish(5, 3, (err, data) => {
+//   if (err) console.log("ERROR:", err);
+//   else {
+//     console.log("data:", data);
+//     console.log("MANTIQLAR ...");
+//   }
+// }); 
+
+
