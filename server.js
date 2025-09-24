@@ -9,11 +9,12 @@ mongodb.connect(connectingString, {
     useUnifiedTopology: true,
 }, 
 (err, client) => {
-    if(err) console.log("ERROR on connecting MongoDB");
+    if(err)
+         console.log("ERROR on connecting MongoDB");
     else {
         console.log("MongoDB connection succeed");
         module.exports = client;
-        
+
         const app = require("./app");
         const server = http.createServer(app);
         let PORT = 3000;
