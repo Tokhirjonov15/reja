@@ -1,23 +1,34 @@
-// TASK B:
-function countDigits(str) {
-  if (typeof str !== "string") {
-    return "Parameter must be a string";
-  }
-
-  let count = 0;
-  for (let i = 0; i < str.length; i++) {
-    if (!isNaN(str[i]) && str[i] !== " ") { 
-      count++;
-    }
-  }
-  return count;
+// TASK C:
+function checkContent(a, b) {
+  return a.toLowerCase().split("").sort().join("") === 
+         b.toLowerCase().split("").sort().join("");
 }
 
-// Test
-console.log(countDigits("hello123"));     
-console.log(countDigits("abc4567xyz"));   
-console.log(countDigits("no digits"));    
-console.log(countDigits("2025 year!"));   
+console.log(checkContent("alex", "elax")); 
+console.log(checkContent("mit", "imt"));
+console.log(checkContent("group", "rtsgd"));
+
+
+// TASK B:
+// function countDigits(str) {
+//   if (typeof str !== "string") {
+//     return "Parameter must be a string";
+//   }
+
+//   let count = 0;
+//   for (let i = 0; i < str.length; i++) {
+//     if (!isNaN(str[i]) && str[i] !== " ") { 
+//       count++;
+//     }
+//   }
+//   return count;
+// }
+
+// // Test
+// console.log(countDigits("hello123"));     
+// console.log(countDigits("abc4567xyz"));   
+// console.log(countDigits("no digits"));    
+// console.log(countDigits("2025 year!"));   
 
 
 
