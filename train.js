@@ -1,36 +1,46 @@
-// TASK D:
-class Shop {
-  constructor(non, lagmon, cola) {
-    this.products = {
-      non: non,
-      lagmon: lagmon,
-      cola: cola
-    };
-  }
-
-  qoldiq() {
-    const vaqt = new Date().toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'});
-    return `Hozir ${vaqt} da ${this.products.non}ta non, ${this.products.lagmon}ta lag'mon va ${this.products.cola}ta cola mavjud!`;
-  }
-
-  sotish(product, qty) {
-    if (this.products[product] >= qty) {
-      this.products[product] -= qty;
-      console.log(`${qty}ta ${product} sotildi!`);
-    }
-  }
-
-  qabul(product, qty) {
-    this.products[product] += qty;
-    console.log(`${qty}ta ${product} qabul qilindi!`);
-  }
+// TASK E
+function reverseString(a) {
+  return a.split("").reverse().join("");
 }
 
-const shop = new Shop(4, 5, 2);
-console.log(shop.qoldiq());      
-shop.sotish("non", 2);
-shop.qabul("cola", 4);
-console.log(shop.qoldiq());
+console.log(reverseString("hello")); 
+console.log(reverseString("alexmit31")); 
+
+
+
+// TASK D:
+// class Shop {
+//   constructor(non, lagmon, cola) {
+//     this.products = {
+//       non: non,
+//       lagmon: lagmon,
+//       cola: cola
+//     };
+//   }
+
+//   qoldiq() {
+//     const vaqt = new Date().toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'});
+//     return `Hozir ${vaqt} da ${this.products.non}ta non, ${this.products.lagmon}ta lag'mon va ${this.products.cola}ta cola mavjud!`;
+//   }
+
+//   sotish(product, qty) {
+//     if (this.products[product] >= qty) {
+//       this.products[product] -= qty;
+//       console.log(`${qty}ta ${product} sotildi!`);
+//     }
+//   }
+
+//   qabul(product, qty) {
+//     this.products[product] += qty;
+//     console.log(`${qty}ta ${product} qabul qilindi!`);
+//   }
+// }
+
+// const shop = new Shop(4, 5, 2);
+// console.log(shop.qoldiq());      
+// shop.sotish("non", 2);
+// shop.qabul("cola", 4);
+// console.log(shop.qoldiq());
 
 
 // TASK C:
