@@ -1,10 +1,25 @@
-// TASK E
-function reverseString(a) {
-  return a.split("").reverse().join("");
+// TASK F
+function findDoublers(str) {
+  for (let i = 0; i < str.length; i++) {
+    if (str.indexOf(str[i]) !== str.lastIndexOf(str[i])) {
+      return true;
+    }
+  }
+  return false;
 }
 
-console.log(reverseString("hello")); 
-console.log(reverseString("alexmit31")); 
+console.log(findDoublers("hello"));
+console.log(findDoublers("alex")); 
+
+
+
+// TASK E
+// function reverseString(a) {
+//   return a.split("").reverse().join("");
+// }
+
+// console.log(reverseString("hello")); 
+// console.log(reverseString("alexmit31")); 
 
 
 
